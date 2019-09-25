@@ -7,7 +7,7 @@ It helps to avoid problems during the installation process of some packages.
 ## Installing on Windows
 
 Download the last version from [Anaconda website]( https://www.anaconda.com/distribution/#windows). Always use python 3+.
-[python 2.7](https://pythonclock.org/) will not be maintained past 2020. 
+[python 2.7](https://pythonclock.org/) will not be maintained past 2020. Also, rememeber to check if your machine is x32 or x64 and download the compatible one. 
 
 To install it is easy, double click the installer to launch. Follow the instructions. During the installation it will be
 shown a message to add Anaconda to the PATH. I recommend to select this option if this is the first python distribution
@@ -137,7 +137,7 @@ pip <pip_subcommand>
 It is possible to create a kernel on jupyter with a conda environment. To do so, 
 
 ```bash
-conda install -n myenv
+conda create -n myenv
 conda activate myenv
 conda install -n myenv ipykernel
 python -m ipykernel install --user --name myenv --display-name "My env kernel"
@@ -155,3 +155,14 @@ This will create a new option of kernel in the jupyter lab
 conda deactivate
 jupyter kernelspec uninstall myenv
 ```
+
+
+# Troubleshooting
+1. Anaconda People are having problems with windowns installer. 
+![alt text](images/install_problem.png)
+
+If this happens, try to install the version x32 instead of the x64. 
+
+
+2. Anacaonda navegator does not appear to be installed. 
+ If this happens, try to install the version x32 instead of the x64. 
